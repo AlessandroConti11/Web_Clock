@@ -24,6 +24,15 @@ span {
 
 h1 {
   margin-bottom: 5vw;
+  font-size: 2vw;
+}
+
+button {
+  padding: 0.5vw;
+  margin-bottom: 1vw;
+  text-align: center;
+  font-size: 1vw;
+  border-radius: 5px;
 }
 
 
@@ -106,7 +115,8 @@ h1 {
   font-size: 1rem;
   border-radius: 5px;
   text-align: center;
-  padding: 0.2vw;
+  padding: 0.5vw;
+  font-weight: bold;
 }
 .date {
   top: 20%;
@@ -165,6 +175,6 @@ h1 {
   }
 
   .info {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 }
