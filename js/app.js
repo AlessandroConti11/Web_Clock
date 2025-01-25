@@ -16,25 +16,29 @@ let week_day = [
     "Saturday"
 ];
 
+// Funzione per creare tacche e numeri adattivi
+function createClockElements() {
+    number_cycle.innerHTML = ""; // Pulisce il contenitore per ridisegnare
+    const clockSize = document.querySelector('.analog-clock').getBoundingClientRect().width; // Dimensione dinamica dell'orologio
+    const radius = clockSize / 2 - 30; // Raggio per posizionare i numeri e tacche (ridotto per rientrare nel bordo)
 
-window.addEventListener('load', () => {
     for (let i = 1; i <= 60; i++) {
         let span = document.createElement('span');
-
         if (i % 5) {
             span.setAttribute('class', 'interval');
-        }
-        else {
+            span.style.height = `${radius * 0.05}px`; // Altezza dinamica delle tacche
+        } else {
             span.innerHTML = i / 5;
+            span.style.fontSize = `${radius * 0.08}px`; // Dimensione dinamica dei numeri
         }
-        span.style.transform = `rotate(${i * 6}deg)`;
-
+        // Posizionamento dinamico usando il raggio
+        span.style.transform = `rotate(${i * 6}deg) translate(0, -${radius + 12}px)`;
         number_cycle.appendChild(span);
-        show_time()
     }
-});
+}
 
 
+// Funzione per mostrare l'ora
 function show_time() {
     let current_date = new Date(),
         hours = current_date.getHours(),
@@ -42,9 +46,8 @@ function show_time() {
         seconds = current_date.getSeconds(),
         sessions = hours >= 12 ? "PM" : "AM";
 
-
     date.textContent = current_date.getFullYear() + "-" + (current_date.getMonth() + 1) + "-" + current_date.getDate();
-    day.textContent = week_day[current_date.getDay()]
+    day.textContent = week_day[current_date.getDay()];
 
     if (hours === 0) {
         hours = 12;
@@ -54,9 +57,21 @@ function show_time() {
     }
     session.textContent = sessions;
 
-    hour_hand.style.transform = `rotate(${hours * 30 + minutes * 0.5}deg)`
-    minute_hand.style.transform = `rotate(${minutes * 6 + seconds * 0.1}deg)`
-    second_hand.style.transform = `rotate(${seconds * 6}deg)`
+    // Aggiorna le posizioni delle mani dell'orologio
+    hour_hand.style.transform = `translateX(-50%) rotate(${hours * 30 + minutes * 0.5}deg)`;
+    minute_hand.style.transform = `translateX(-50%) rotate(${minutes * 6 + seconds * 0.1}deg)`;
+    second_hand.style.transform = `translateX(-50%) rotate(${seconds * 6}deg)`;
 
-    setTimeout(show_time, 1000)
+    setTimeout(show_time, 1000);
 }
+
+// Event listener per il caricamento della finestra
+window.addEventListener('load', () => {
+    createClockElements(); // Disegna i numeri e tacche
+    show_time(); // Mostra l'ora
+});
+
+// Event listener per il ridimensionamento della finestra
+window.addEventListener('resize', () => {
+    createClockElements(); // Ridisegna l'orologio in modo adattivo
+});
