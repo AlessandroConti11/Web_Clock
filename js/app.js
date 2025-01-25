@@ -26,10 +26,11 @@ function createClockElements() {
         let span = document.createElement('span');
         if (i % 5) {
             span.setAttribute('class', 'interval');
-            span.style.height = `${radius * 0.05}px`; // Altezza dinamica delle tacche
+            span.style.height = `${radius * 0.005}px`; // Altezza dinamica delle tacche
         } else {
             span.innerHTML = i / 5;
-            span.style.fontSize = `${radius * 0.08}px`; // Dimensione dinamica dei numeri
+            span.style.fontSize = `${radius * 0.008}rem`; // Dimensione dinamica dei numeri
+            span.style.fontWeight = "bold";
         }
         // Posizionamento dinamico usando il raggio
         span.style.transform = `rotate(${i * 6}deg) translate(0, -${radius + 12}px)`;
