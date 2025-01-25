@@ -33,7 +33,7 @@ function createClockElements() {
             span.style.fontWeight = "bold";
         }
         // Posizionamento dinamico usando il raggio
-        span.style.transform = `rotate(${i * 6}deg) translate(0, -${radius + 12}px)`;
+        span.style.transform = `rotate(${i * 6}deg) translate(0, -${radius + 5}px)`;
         number_cycle.appendChild(span);
     }
 }
