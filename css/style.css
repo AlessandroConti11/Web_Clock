@@ -29,17 +29,20 @@ body {
 }
 
 .center-dot {
-  width: 6%;
-  height: 6%;
+  width: 8%;
+  height: 8%;
   background-color: gray;
   border-radius: 50%;
   position: absolute;
   z-index: 10;
+  top: 47%;
 }
 
 .hand {
   position: absolute;
   left: 50%;
+  bottom: 50%;
+  transform-origin: bottom;
 }
 
 .hour-hands {
@@ -49,7 +52,7 @@ body {
   background-color: black;
   top: 30%;
   margin-left: -0.5%;
-  transform-origin: 50% 85%;
+  /*transform-origin: 50% 85%;*/
 }
 .minute-hands {
   z-index: 6;
@@ -58,15 +61,14 @@ body {
   background-color: blue;
   top: 20%;
   margin-left: -0.5%;
-  transform-origin: 50% 90%;
 }
 .second-hands {
   z-index: 7;
   width: 0.5%;
   height: 40%;
   background-color: red;
-  top: 10%;
-  margin-left: -0.25%;
+  top: 11%;
+  margin-left: -0.5%;
   transform-origin: 50% 95%;
 }
 
@@ -98,7 +100,7 @@ span {
 }
 
 .session {
-  top: 40%;
+  top: 47%;
   right: 10%;
   width: 10%;
 }
@@ -119,19 +121,26 @@ span {
   .center-dot {
     width: 8%;
     height: 8%;
+    top: 45%;
   }
   .hour-hands {
     width: 2%;
     height: 18%;
+    top: 32%;
   }
   .minute-hands {
     height: 28%;
+    top: 22%;
   }
   .second-hands {
     height: 35%;
+    top: 15%;
   }
   .info {
     font-size: 0.6rem;
+  }
+  .session {
+    top: 47%;
   }
 }
 
@@ -141,8 +150,9 @@ span {
     height: 80vw;
   }
   .center-dot {
-    width: 10%;
-    height: 10%;
+    width: 8%;
+    height: 8%;
+    top: 45%;
   }
   .info {
     font-size: 0.5rem;
