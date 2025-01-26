@@ -1,23 +1,35 @@
 .digital-clock {
-    color: #fff;
-    background-color: #000;
-    font-family: "Segoe UI", sans-serif;
-    width: 340px;
-    padding: 15px 10px;
-    border: 3px solid green;
-    border-radius: 5px;
+    background: lightgray;
+    width: 500vw;
+    height: 500vw;
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 5%;
+    border: 10px solid black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .digital-date-day {
-    font-size: 20px;
-    font-weight: 600;
+    background-color: grey;
+    position: absolute;
+    font-size: 2rem;
+    font-weight: bold;
     text-align: center;
-    letter-spacing: 3px;
+    padding: 0.5vw;
+    letter-spacing: 0.1vw;
+    top: 5%;
+}
+.digital-day {
+    margin-top: 1vw;
 }
 
 
 .digital-time {
+    position: absolute;
     font-size: 60px;
     display: flex;
     justify-content: center;
@@ -31,7 +43,7 @@
     letter-spacing: 3px;
 }
 .digital-time span:last-child {
-    background: red;
+    background: grey;
     font-size: 30px;
     font-weight: 600;
     text-transform: uppercase;

@@ -7,7 +7,7 @@ function change_clock() {
     if (clock_type.textContent === 'Analog Clock') {
         analog_clock.style.display = 'none';
         clock_type.textContent = 'Digital Clock';
-        digital_clock.style.display = 'initial';
+        digital_clock.style.display = 'flex';
 
     }
     else if (clock_type.textContent === 'Digital Clock') {
@@ -17,3 +17,14 @@ function change_clock() {
         create_analog_clock_element();
     }
 }
+
+
+window.addEventListener('load', () => {
+    create_analog_clock_element();
+    show_analog_time();
+    show_digital_time();
+});
+
+window.addEventListener('resize', () => {
+    create_analog_clock_element();
+});

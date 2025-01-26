@@ -8,7 +8,7 @@ const digital_date = document.querySelector(".digital-date"),
 
 function show_digital_time() {
     let current_date = new Date(),
-        hours = current_date.getHours() % 12,
+        hours = current_date.getHours(),
         minutes = current_date.getMinutes(),
         seconds = current_date.getSeconds(),
         sessions = hours >= 12 ? "PM" : "AM";
@@ -17,7 +17,7 @@ function show_digital_time() {
     digital_day.textContent = week_day[current_date.getDay()];
     digital_session.textContent = sessions;
 
-    digital_hour.textContent = hours;
+    digital_hour.textContent = hours % 12;
     digital_minute.textContent = minutes;
     digital_second.textContent = seconds;
 
