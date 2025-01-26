@@ -1,6 +1,6 @@
-const date = document.querySelector('.date'),
-    day = document.querySelector('.day'),
-    session = document.querySelector('.session'),
+const date = document.querySelector('.analog-date'),
+    day = document.querySelector('.analog-day'),
+    session = document.querySelector('.analog-session'),
     hour_hand = document.querySelector('.hour-hands'),
     minute_hand = document.querySelector('.minute-hands'),
     second_hand = document.querySelector('.second-hands');

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Web Clock</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/analog_clock_style.css">
   </head>
 
 
@@ -15,10 +16,11 @@
 
     <button class="change-clock-button" onclick="change_clock()">Change Clock</button>
 
+
     <div class="analog-clock">
-      <div class="info date"></div>
-      <div class="info day"></div>
-      <div class="info session"></div>
+      <div class="info-analog analog-date"></div>
+      <div class="info-analog analog-day"></div>
+      <div class="info-analog analog-session"></div>
 
       <div class="center-dot"></div>
 
@@ -30,6 +32,7 @@
 
       <div class="number-cycle"></div>
     </div>
+
 
     <script src="js/compute_analog_time.js"></script>
     <script src="js/change_clock.js"></script>

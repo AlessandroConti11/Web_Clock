@@ -13,16 +13,16 @@ function create_analog_clock_element() {
 
         if (i % 5) {
             span.setAttribute('class', 'interval');
-            span.style.height = `${radius * 0.005}px`;
+            span.style.height = `${radius * 0.002}rem`;
+            span.style.transform = `rotate(${i * 6}deg) translate(0, -${radius + 5}px)`;
         }
         else {
             span.innerHTML = i / 5;
             span.style.fontSize = `${radius * 0.008}rem`;
             span.style.fontWeight = "bold";
+            span.style.transform = `rotate(${i * 6}deg) translate(0, -${radius + 5}px) rotate(-${i * 6}deg)`;
         }
 
-
-        span.style.transform = `rotate(${i * 6}deg) translate(0, -${radius + 5}px)`;
         number_cycle.appendChild(span);
     }
 }
