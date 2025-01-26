@@ -2,14 +2,15 @@ const number_cycle = document.querySelector('.number-cycle');
 
 
 function create_analog_clock_element() {
-    number_cycle.innerHTML = "";
-
     const clockSize = document.querySelector('.analog-clock').getBoundingClientRect().width;
     const radius = clockSize / 2 - 30;
 
 
     for (let i = 1; i <= 60; i++) {
         let span = document.createElement('span');
+        span.style.position = 'absolute';
+        span.style.zIndex = '2';
+        span.style.transformOrigin = "50% 45%"
 
         if (i % 5) {
             span.setAttribute('class', 'interval');

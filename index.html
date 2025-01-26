@@ -5,9 +5,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Web Clock</title>
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/analog_clock_style.css">
+    <link rel="stylesheet" href="css/digital_clock_style.css">
   </head>
 
 
@@ -34,8 +37,24 @@
     </div>
 
 
+    <div class="digital-clock" style="display: none">
+      <div class="digital-date-day">
+        <span class="digital-date"></span>
+        <span class="digital-day"></span>
+      </div>
+
+      <div class="digital-time">
+        <span class="digital-hour"></span>:
+        <span class="digital-minute"></span>:
+        <span class="digital-second"></span>
+        <span class="digital-session"></span>
+      </div>
+    </div>
+
+
     <script src="js/compute_analog_time.js"></script>
     <script src="js/change_clock.js"></script>
     <script src="js/create_clock.js"></script>
+    <script src="js/compute_digital_time.js"></script>
   </body>
 </html>

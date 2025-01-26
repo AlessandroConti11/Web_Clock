@@ -15,12 +15,6 @@ body {
   flex-direction: column;
 }
 
-span {
-  position: absolute;
-  z-index: 2;
-  transform-origin: 50% 45%;
-}
-
 h1 {
   margin-bottom: 5vw;
   font-size: 2vw;
