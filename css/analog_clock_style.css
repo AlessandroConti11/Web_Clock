@@ -72,7 +72,7 @@
     top: 74%;
 }
 .analog-session {
-    top: 46%;
+    top: 45%;
     right: 10%;
 }
 
@@ -106,7 +106,7 @@
         font-size: 0.8rem;
     }
     .analog-session {
-        top: 47%;
+        top: 48%;
     }
 }
 
@@ -123,5 +123,8 @@
 
     .info-analog {
         font-size: 0.6rem;
+    }
+    .analog-session {
+        top: 47%
     }
 }
