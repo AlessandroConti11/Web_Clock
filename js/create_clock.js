@@ -1,9 +1,25 @@
-const number_cycle = document.querySelector('.number-cycle');
+const
+    /**
+     * Element that will hold the analog clock numbers.
+     * @type {Element}
+     */
+    number_cycle = document.querySelector('.number-cycle');
 
 
+/**
+ * Function that creates the elements of the analog clock.
+ */
 function create_analog_clock_element() {
-    const clockSize = document.querySelector('.analog-clock').getBoundingClientRect().width;
-    const radius = clockSize / 2 - 30;
+    /**
+     * Variable that saves the size of the analog clock.
+     * @type {number}
+     */
+    const clock_size = document.querySelector('.analog-clock').getBoundingClientRect().width;
+    /**
+     * Variable that saves the radius of the analog clock.
+     * @type {number}
+     */
+    const radius = clock_size / 2 - 30;
 
 
     for (let i = 1; i <= 60; i++) {

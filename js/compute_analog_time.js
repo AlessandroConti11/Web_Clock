@@ -1,11 +1,40 @@
-const analog_date = document.querySelector('.analog-date'),
+const
+    /**
+     * Element that represent the date in the analog clock.
+     * @type {Element}
+     */
+    analog_date = document.querySelector('.analog-date'),
+    /**
+     * Element that represent the week day in the analog clock.
+     * @type {Element}
+     */
     analog_day = document.querySelector('.analog-day'),
+    /**
+     * Element that represent the session in the analog day.
+     * @type {Element}
+     */
     analog_session = document.querySelector('.analog-session'),
+    /**
+     * Element that represent the hour hand of the analog clock.
+     * @type {Element}
+     */
     hour_hand = document.querySelector('.hour-hands'),
+    /**
+     * Element that represent the minute hand of the analog clock.
+     * @type {Element}
+     */
     minute_hand = document.querySelector('.minute-hands'),
+    /**
+     * Element that represent the second hand of the analog clock.
+     * @type {Element}
+     */
     second_hand = document.querySelector('.second-hands');
 
-let week_day = [
+/**
+ * Array of week day.
+ * @type {string[]}
+ */
+const week_day = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -16,12 +45,20 @@ let week_day = [
 ];
 
 
+/**
+ * Function that show the time in the analog clock.
+ */
 function show_analog_time() {
+    /**
+     * The current date-time.
+     * @type {Date}
+     */
     let current_date = new Date(),
         hours = current_date.getHours(),
         minutes = current_date.getMinutes(),
         seconds = current_date.getSeconds(),
         sessions = hours >= 12 ? "PM" : "AM";
+
 
     hours %= 12;
 
