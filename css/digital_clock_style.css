@@ -4,13 +4,7 @@
 
 
 .digital-date-day {
-    background-color: grey;
-    position: absolute;
     font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    padding: 0.5vw;
-    letter-spacing: 0.1vw;
 }
 .digital-date {
     top: 10%;
@@ -26,9 +20,7 @@
     justify-content: center;
     align-items: center;
 }
-.digital-hour,
-.digital-minute,
-.digital-second {
+.time-digital {
     position: relative;
     margin: 0 0.5vw;
     font-weight: 600;
@@ -36,16 +28,25 @@
     letter-spacing: 0.1vw;
     display: inline-block;
 }
+.digital-hour {
+    color: black;
+}
+.digital-minute {
+    color: blue;
+}
+.digital-second {
+    color: red;
+}
+
 .digital-session {
-    background-color: grey;
+    position: initial;
     font-size: 1.5rem;
-    font-weight: bold;
     margin-top: 0.8vw;
     padding: 0.3vw;
-    border-radius: 3px;
 }
 .digital-colons {
     animation: fadeInOut 1s infinite;
+    color: #e1e1e1;
 }
 @keyframes fadeInOut {
     0%, 100% {
@@ -67,9 +68,7 @@
         font-size: 1.8rem;
     }
 
-    .digital-hour,
-    .digital-minute,
-    .digital-second {
+    .time-digital {
         font-size: 4.8rem;
     }
     .digital-session {
@@ -88,9 +87,7 @@
         font-size: 1.2rem;
     }
 
-    .digital-hour,
-    .digital-minute,
-    .digital-second {
+    .time-digital {
         font-size: 2.5rem;
     }
     .digital-session {

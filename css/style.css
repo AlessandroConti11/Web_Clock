@@ -22,14 +22,29 @@ h1 {
 
 button {
   padding: 0.5vw;
-  margin-bottom: 1vw;
+  margin-bottom: 2vw;
   text-align: center;
   font-size: 1.5vw;
-  border-radius: 5px;
+  border-radius: 10px;
+
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 9px #999;
+}
+button:hover {
+  background: #ffa43b;
+  box-shadow: 0 9px #885d20;
+}
+button:active {
+  background: linear-gradient(-135deg, #bdff09, #ffa43b, #ff0044);
+  box-shadow: 0 5px #ffa43b;
+  transform: translateY(5px);
 }
 
+
 .clock {
-  background: lightgray;
+  background: linear-gradient(-135deg, #878200, #e19235, #ff0044);
   width: 500vw;
   height: 500vw;
   max-width: 500px;
@@ -39,6 +54,19 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
+.info {
+  color: #fef9c3;
+  position: absolute;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0.5vw;
+  letter-spacing: 0.1vw;
+  font-weight: bold;
 }
 
 
@@ -48,7 +76,9 @@ button {
   }
 
   button {
+    padding: 1vw;
     font-size: 3vw;
+    margin-bottom: 3vw;
   }
 }
 
@@ -59,7 +89,8 @@ button {
   }
 
   button {
-    padding: 1vw;
+    padding: 1.2vw;
     font-size: 2.8vw;
+    margin-bottom: 4vw;
   }
 }
