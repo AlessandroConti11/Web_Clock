@@ -20,7 +20,7 @@
     <button class="change-clock-button" onclick="change_clock()">Change Clock</button>
 
 
-    <div class="analog-clock" style="display: none">
+    <div class="clock analog-clock">
       <div class="info-analog analog-date"></div>
       <div class="info-analog analog-day"></div>
       <div class="info-analog analog-session"></div>
@@ -37,18 +37,17 @@
     </div>
 
 
-    <div class="digital-clock">
-      <div class="digital-date-day">
-        <div class="digital-date"></div>
-        <div class="digital-day"></div>
-      </div>
+    <div class="clock digital-clock" style="display: none">
+      <div class="digital-date-day digital-date"></div>
 
       <div class="digital-time">
-        <span class="digital-hour"></span>:
-        <span class="digital-minute"></span>:
-        <span class="digital-second"></span>
-        <span class="digital-session"></span>
+        <div class="digital-hour"></div> <div class="digital-hour digital-colons">:</div>
+        <div class="digital-minute"></div> <div class="digital-minute digital-colons">:</div>
+        <div class="digital-second"></div>
+        <div class="digital-session"></div>
       </div>
+
+      <div class="digital-date-day digital-day"></div>
     </div>
 
 

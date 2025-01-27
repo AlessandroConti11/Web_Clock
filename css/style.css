@@ -17,13 +17,49 @@ body {
 
 h1 {
   margin-bottom: 5vw;
-  font-size: 2vw;
+  font-size: 4.5vw;
 }
 
 button {
   padding: 0.5vw;
   margin-bottom: 1vw;
   text-align: center;
-  font-size: 1vw;
+  font-size: 1.5vw;
   border-radius: 5px;
+}
+
+.clock {
+  background: lightgray;
+  width: 500vw;
+  height: 500vw;
+  max-width: 500px;
+  max-height: 500px;
+  border: 10px solid black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media (max-width: 760px) {
+  h1 {
+    font-size: 9vw;
+  }
+
+  button {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    padding: 1vw;
+    font-size: 8.8vw;
+  }
+
+  button {
+    padding: 1vw;
+    font-size: 2.8vw;
+  }
 }

@@ -25,7 +25,12 @@ function show_analog_time() {
 
     hours %= 12;
 
-    analog_date.textContent = current_date.getFullYear() + "-" + (current_date.getMonth() + 1) + "-" + current_date.getDate();
+    analog_date.textContent = current_date.getFullYear() +
+        "-" +
+        (new Intl.NumberFormat('en-US', {minimumIntegerDigits: 2}).format(current_date.getMonth() + 1)) +
+        "-" +
+        new Intl.NumberFormat('en-US', {minimumIntegerDigits: 2}).format(current_date.getDate());
+
     analog_day.textContent = week_day[current_date.getDay()];
     analog_session.textContent = sessions;
 

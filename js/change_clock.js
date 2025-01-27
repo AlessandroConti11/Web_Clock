@@ -21,10 +21,13 @@ function change_clock() {
 
 window.addEventListener('load', () => {
     create_analog_clock_element();
+
     show_analog_time();
     show_digital_time();
 });
 
 window.addEventListener('resize', () => {
+    number_cycle.innerHTML = '';
+
     create_analog_clock_element();
 });

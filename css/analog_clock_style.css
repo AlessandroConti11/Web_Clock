@@ -1,15 +1,5 @@
 .analog-clock {
-    background: lightgray;
-    width: 500vw;
-    height: 500vw;
-    max-width: 500px;
-    max-height: 500px;
     border-radius: 50%;
-    border: 10px solid black;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .center-dot {
@@ -74,7 +64,7 @@
 .info-analog {
     position: absolute;
     background-color: grey;
-    font-size: 1rem;
+    font-size: 1.5rem;
     border-radius: 5px;
     text-align: center;
     padding: 0.5vw;
@@ -94,8 +84,8 @@
 
 @media (max-width: 768px) {
     .analog-clock {
-        width: 60vw;
-        height: 60vw;
+        width: 80vw;
+        height: 80vw;
     }
     .center-dot {
         width: 8%;
@@ -127,8 +117,8 @@
 
 @media (max-width: 480px) {
     .analog-clock {
-        width: 80vw;
-        height: 80vw;
+        width: 60vw;
+        height: 60vw;
     }
     .center-dot {
         width: 8%;

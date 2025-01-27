@@ -1,15 +1,5 @@
 .digital-clock {
-    background: lightgray;
-    width: 500vw;
-    height: 500vw;
-    max-width: 500px;
-    max-height: 500px;
     border-radius: 5%;
-    border: 10px solid black;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 
@@ -21,33 +11,90 @@
     text-align: center;
     padding: 0.5vw;
     letter-spacing: 0.1vw;
-    top: 5%;
+}
+.digital-date {
+    top: 10%;
 }
 .digital-day {
-    margin-top: 1vw;
+    bottom: 10%;
 }
 
 
 .digital-time {
-    position: absolute;
-    font-size: 60px;
+    font-size: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.digital-time span:not(:last-child) {
+.digital-hour,
+.digital-minute,
+.digital-second {
     position: relative;
-    margin: 0 6px;
+    margin: 0 0.5vw;
     font-weight: 600;
     text-align: center;
-    letter-spacing: 3px;
+    letter-spacing: 0.1vw;
+    display: inline-block;
 }
-.digital-time span:last-child {
-    background: grey;
-    font-size: 30px;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-top: 10px;
-    padding: 0 5px;
+.digital-session {
+    background-color: grey;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 0.8vw;
+    padding: 0.3vw;
     border-radius: 3px;
+}
+.digital-colons {
+    animation: fadeInOut 1s infinite;
+}
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 760px) {
+    .digital-clock {
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .digital-date-day {
+        font-size: 1.8rem;
+    }
+
+    .digital-hour,
+    .digital-minute,
+    .digital-second {
+        font-size: 4.8rem;
+    }
+    .digital-session {
+        margin-top: 5vw;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .digital-clock {
+        width: 60vw;
+        height: 60vw;
+    }
+
+    .digital-date-day {
+        font-size: 1.2rem;
+    }
+
+    .digital-hour,
+    .digital-minute,
+    .digital-second {
+        font-size: 2.5rem;
+    }
+    .digital-session {
+        margin-top: 2vw;
+        font-size: 1rem;
+    }
 }
