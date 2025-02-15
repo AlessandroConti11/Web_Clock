@@ -20,12 +20,15 @@ h1 {
   font-size: 4.5vw;
 }
 
-button {
-  padding: 0.5vw;
+.navigation-button {
+  display: flex;
+  flex-direction: row;
   margin-bottom: 2vw;
+}
+button {
+  padding: 1vw 2vw;
   text-align: center;
   font-size: 1.5vw;
-  border-radius: 10px;
 
   display: inline-block;
   cursor: pointer;
@@ -38,8 +41,8 @@ button:hover {
 }
 button:active {
   background: linear-gradient(-135deg, #bdff09, #ffa43b, #ff0044);
-  box-shadow: 0 5px #ffa43b;
-  transform: translateY(5px);
+  /*box-shadow: 0 5px #ffa43b;*/
+  /*transform: translateY(5px);*/
 }
 
 

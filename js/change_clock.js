@@ -13,25 +13,50 @@ const
      * Element that represent the digital clock.
      * @type {Element}
      */
-    digital_clock = document.querySelector('.digital-clock');
+    digital_clock = document.querySelector('.digital-clock'),
+    /**
+     * Element that represent the stopwatch.
+     * @type {Element}
+     */
+    stopwatch_clock = document.querySelector('.stopwatch');
 
 
 /**
  * Function that change the clock type to display.
  */
 function change_clock() {
-    if (clock_type.textContent === 'Analog Clock') {
-        analog_clock.style.display = 'none';
-        clock_type.textContent = 'Digital Clock';
-        digital_clock.style.display = 'flex';
+    switch (clock_type.textContent) {
+        case 'Analog Clock':
+            clock_type.textContent = 'Digital Clock';
+            analog_clock.style.display = 'none';
+            digital_clock.style.display = 'flex';
+            stopwatch_clock.style.display = 'none';
+            break;
+        case 'Digital Clock':
+            clock_type.textContent = 'Analog Clock';
+            analog_clock.style.display = 'flex';
+            digital_clock.style.display = 'none';
+            stopwatch_clock.style.display = 'none';
+            create_analog_clock_element();
+            break;
+        case 'Stopwatch':
+            clock_type.textContent = "Analog Clock"
+            analog_clock.style.display = 'flex';
+            digital_clock.style.display = 'none';
+            stopwatch_clock.style.display = 'none';
+            create_analog_clock_element();
+            break;
     }
-    else if (clock_type.textContent === 'Digital Clock') {
-        analog_clock.style.display = 'flex';
-        clock_type.textContent = 'Analog Clock';
-        digital_clock.style.display = 'none';
+}
 
-        create_analog_clock_element();
-    }
+/**
+ * Function that show the stopwatch.
+ */
+function show_stopwatch() {
+    clock_type.textContent = "Stopwatch";
+    analog_clock.style.display = "none";
+    digital_clock.style.display = 'none';
+    stopwatch_clock.style.display = 'block';
 }
 
 
