@@ -43,3 +43,18 @@ function create_analog_clock_element() {
         number_cycle.appendChild(span);
     }
 }
+
+
+/**
+ * Function that creates the elements of the stopwatch.
+ */
+function create_stopwatch_element() {
+    stopwatch_time.innerHTML = "00:00:00:00"
+    stopwatch_reset.setAttribute("style", "display: none;");
+    stopwatch_lap.setAttribute("disabled", true);
+    stopwatch_stop.setAttribute("style", "display: none;");
+
+    stopwatch_laps.setAttribute("style", "display: flex;");
+    stopwatch_laps.setAttribute("style", "text-align: center;");
+    stopwatch_laps.setAttribute("style", "list-style: none;");
+}

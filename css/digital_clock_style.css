@@ -59,11 +59,6 @@
 
 
 @media (max-width: 760px) {
-    .digital-clock {
-        width: 80vw;
-        height: 80vw;
-    }
-
     .digital-date-day {
         font-size: 1.8rem;
     }
@@ -78,11 +73,6 @@
 }
 
 @media (max-width: 480px) {
-    .digital-clock {
-        width: 60vw;
-        height: 60vw;
-    }
-
     .digital-date-day {
         font-size: 1.2rem;
     }

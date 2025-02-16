@@ -8,18 +8,27 @@
 
     <title>Web Clock</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/analog_clock_style.css">
     <link rel="stylesheet" href="css/digital_clock_style.css">
+    <link rel="stylesheet" href="css/stopwatch_style.css">
   </head>
 
 
   <body>
+    <!-- Title -->
     <h1 class="clock-type" id="clock-type">Analog Clock</h1>
 
-    <button class="change-clock-button" onclick="change_clock()">Change Clock</button>
+
+    <!-- Nav Button -->
+    <div class="navigation-button">
+      <button class="change-clock-button" onclick="change_clock()">Change Clock</button>
+      <button class="show-stopwatch-button" onclick="show_stopwatch()">Stopwatch</button>
+    </div>
 
 
+    <!-- Analog Clock-->
     <div class="clock analog-clock">
       <div class="info info-analog analog-date"></div>
       <div class="info info-analog analog-day"></div>
@@ -37,6 +46,7 @@
     </div>
 
 
+    <!-- Digital Clock -->
     <div class="clock digital-clock" style="display: none">
       <div class="info digital-date-day digital-date"></div>
 
@@ -51,9 +61,24 @@
     </div>
 
 
+    <!-- Stopwatch-->
+    <div class="clock stopwatch" style="display: none">
+      <div class="stopwatch-time"></div>
+      <div class="stopwatch-button">
+        <button class="stopwatch-reset" style="display: none" onclick="reset_stopwatch()">Reset</button>
+        <button class="stopwatch-lap" disabled onclick="lap_stopwatch()">Lap</button>
+        <button class="stopwatch-start" onclick="start_stopwatch()">Start</button>
+        <button class="stopwatch-stop" style="display: none" onclick="stop_stopwatch()">Stop</button>
+      </div>
+      <ul class="stopwatch-laps"></ul>
+    </div>
+
+
+    <!-- JavaScript -->
     <script src="js/compute_analog_time.js"></script>
     <script src="js/change_clock.js"></script>
     <script src="js/create_clock.js"></script>
     <script src="js/compute_digital_time.js"></script>
+    <script src="js/stopwatch.js"></script>
   </body>
 </html>
