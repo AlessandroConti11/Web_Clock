@@ -63,6 +63,18 @@ let
 
 
 /**
+ * Function that show the stopwatch.
+ */
+function show_stopwatch() {
+    clock_type.textContent = "Stopwatch";
+    analog_clock.setAttribute("style", "display: none;");
+    digital_clock.setAttribute("style", "display: none;");
+    stopwatch_clock.setAttribute("style", "display: flex;");
+
+}
+
+
+/**
  * Function that start the stopwatch.
  */
 function start_stopwatch() {

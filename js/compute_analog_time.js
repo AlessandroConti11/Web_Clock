@@ -57,7 +57,7 @@ function show_analog_time() {
         hours = current_date.getHours(),
         minutes = current_date.getMinutes(),
         seconds = current_date.getSeconds(),
-        sessions = hours >= 12 ? "PM" : "AM";
+        sessions = hours > 12 ? "PM" : "AM";
 
 
     hours %= 12;
@@ -71,9 +71,10 @@ function show_analog_time() {
     analog_day.textContent = week_day[current_date.getDay()];
     analog_session.textContent = sessions;
 
-    hour_hand.style.transform = `translateX(-50%) rotate(${hours * 30 + minutes * 0.5}deg)`;
-    minute_hand.style.transform = `translateX(-50%) rotate(${minutes * 6 + seconds * 0.1}deg)`;
-    second_hand.style.transform = `translateX(-50%) rotate(${seconds * 6}deg)`;
+    hour_hand.setAttribute("style", `transform: translateX(-50%) rotate(${hours * 30 + minutes * 0.5}deg);`);
+    minute_hand.setAttribute("style", `transform: translateX(-50%) rotate(${minutes * 6 + seconds * 0.1}deg);`);
+    second_hand.setAttribute("style", `transform: translateX(-50%) rotate(${seconds * 6}deg);`);
+
 
     setTimeout(show_analog_time, 1000);
 }

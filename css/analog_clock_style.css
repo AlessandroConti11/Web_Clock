@@ -5,7 +5,6 @@
 .center-dot {
     width: 8%;
     height: 8%;
-    /*background-color: gray;*/
     background: linear-gradient(-135deg, #ff0044,#e19235, #878200);
     border-radius: 50%;
     position: absolute;
@@ -78,10 +77,6 @@
 
 
 @media (max-width: 768px) {
-    .analog-clock {
-        width: 80vw;
-        height: 80vw;
-    }
     .center-dot {
         width: 8%;
         height: 8%;
@@ -111,10 +106,6 @@
 }
 
 @media (max-width: 480px) {
-    .analog-clock {
-        width: 60vw;
-        height: 60vw;
-    }
     .center-dot {
         width: 8%;
         height: 8%;

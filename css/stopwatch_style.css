@@ -1,12 +1,12 @@
 .stopwatch {
-
-    display: block;
+    flex-direction: column;
     border-radius: 5%;
 }
 
+
 .stopwatch-time {
     margin-top: 7vw;
-    margin-bottom: 2vw;
+    margin-bottom: 1.5vw;
     font-size: 5rem;
     display: flex;
     justify-content: center;
@@ -17,7 +17,8 @@
 .stopwatch-button {
     display: flex;
     justify-content: center;
-    gap: 100px;
+    gap: 5vw;
+    margin-bottom: 2vw;
 }
 .stopwatch-button button {
     display: flex;
@@ -26,28 +27,92 @@
     border-radius: 10px;
     width: 5vw;
     height: 2.5vw;
-    background: blue;
+    background: #878200FF;
     border: none;
     padding: 0;
     cursor: pointer;
     font-size: 1vw;
     text-align: center;
 }
-
-
 .stopwatch-button .stopwatch-stop,
 .stopwatch-button .stopwatch-reset {
-    background: red;
+    background: #FF0044FF;
 }
+.stopwatch-lap[disabled] {
+    cursor: default;
+    pointer-events: none;
+}
+
 
 .stopwatch-laps {
-    height: 100px;
-    padding: 10px;
+    height: 5vw;
+    width: 20vw;
     overflow: auto;
-    margin-top: 20px;
+    margin-top: 0.25vw;
+
+    text-align: center;
+    list-style: none;
 }
 .stopwatch-laps li {
-    font-size: 22px;
-    padding: 10px;
+    font-size: 1.25vw;
+    padding: 0.5vw;
 }
 
+
+@media (max-width: 760px) {
+    .stopwatch-time {
+        margin-top: 3.5rem;
+        margin-bottom: 1rem;
+        font-size: 4.8rem;
+    }
+
+    .stopwatch-button {
+        gap: 5rem;
+        margin-bottom: 0.5rem;
+    }
+    .stopwatch-button button {
+        width: 4.5rem;
+        height: 2.5rem;
+        font-size: 1rem;
+        box-shadow: 0 7px #999;
+    }
+
+    .stopwatch-laps {
+        height: 5rem;
+        width: 20rem;
+        margin-top: 0.3rem;
+    }
+    .stopwatch-laps li {
+        font-size: 1.5rem;
+        padding: 0.4rem;
+    }
+
+}
+@media (max-width: 480px) {
+    .stopwatch-time {
+        margin-top: 3.5rem;
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+    }
+
+    .stopwatch-button {
+        gap: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .stopwatch-button button {
+        width: 3.5rem;
+        height: 1.5rem;
+        font-size: 0.75rem;
+        box-shadow: 0 5px #999;
+    }
+
+    .stopwatch-laps {
+        height: 2.75rem;
+        width: 10.25rem;
+        margin-top: 0.3rem;
+    }
+    .stopwatch-laps li {
+        font-size: 1rem;
+        padding: 0.2rem;
+    }
+}

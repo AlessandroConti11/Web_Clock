@@ -43,7 +43,7 @@ function show_digital_time() {
         hours = current_date.getHours(),
         minutes = current_date.getMinutes(),
         seconds = current_date.getSeconds(),
-        sessions = hours >= 12 ? "PM" : "AM";
+        sessions = hours > 12 ? "PM" : "AM";
 
 
     digital_date.textContent = current_date.getFullYear() +
@@ -55,7 +55,7 @@ function show_digital_time() {
     digital_day.textContent = week_day[current_date.getDay()];
     digital_session.textContent = sessions;
 
-    digital_hour.textContent = new Intl.NumberFormat('en-US', {minimumIntegerDigits: 2}).format(hours % 12);
+    digital_hour.textContent = new Intl.NumberFormat('en-US', {minimumIntegerDigits: 2}).format(hours % 12 || 12);
     digital_minute.textContent = new Intl.NumberFormat('en-US', {minimumIntegerDigits: 2}).format(minutes);
     digital_second.textContent = new Intl.NumberFormat('en-US', {minimumIntegerDigits: 2}).format(seconds);
 

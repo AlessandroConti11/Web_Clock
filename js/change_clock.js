@@ -28,40 +28,34 @@ function change_clock() {
     switch (clock_type.textContent) {
         case 'Analog Clock':
             clock_type.textContent = 'Digital Clock';
-            analog_clock.style.display = 'none';
-            digital_clock.style.display = 'flex';
-            stopwatch_clock.style.display = 'none';
+            analog_clock.setAttribute("style", "display: none;");
+            digital_clock.setAttribute("style", "display: flex;");
+            stopwatch_clock.setAttribute("style", "display: none;");
             break;
         case 'Digital Clock':
             clock_type.textContent = 'Analog Clock';
-            analog_clock.style.display = 'flex';
-            digital_clock.style.display = 'none';
-            stopwatch_clock.style.display = 'none';
+            analog_clock.setAttribute("style", "display: flex;");
+            digital_clock.setAttribute("style", "display: none;");
+            stopwatch_clock.setAttribute("style", "display: none;");
             create_analog_clock_element();
             break;
         case 'Stopwatch':
             clock_type.textContent = "Analog Clock"
-            analog_clock.style.display = 'flex';
-            digital_clock.style.display = 'none';
-            stopwatch_clock.style.display = 'none';
+            analog_clock.setAttribute("style", "display: flex;");
+            digital_clock.setAttribute("style", "display: none;");
+            stopwatch_clock.setAttribute("style", "display: none;");
             create_analog_clock_element();
             break;
     }
 }
 
-/**
- * Function that show the stopwatch.
- */
-function show_stopwatch() {
-    clock_type.textContent = "Stopwatch";
-    analog_clock.style.display = "none";
-    digital_clock.style.display = 'none';
-    stopwatch_clock.style.display = 'block';
-}
-
 
 window.addEventListener('load', () => {
+    digital_clock.setAttribute("style", "display: none;");
+    stopwatch_clock.setAttribute("style", "display: none;");
+
     create_analog_clock_element();
+    create_stopwatch_element();
 
     show_analog_time();
     show_digital_time();

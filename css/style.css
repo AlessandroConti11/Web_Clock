@@ -20,12 +20,9 @@ h1 {
   font-size: 4.5vw;
 }
 
-.navigation-button {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 2vw;
-}
 button {
+  width: 250vw;
+  max-width: 250px;
   padding: 1vw 2vw;
   text-align: center;
   font-size: 1.5vw;
@@ -41,8 +38,13 @@ button:hover {
 }
 button:active {
   background: linear-gradient(-135deg, #bdff09, #ffa43b, #ff0044);
-  /*box-shadow: 0 5px #ffa43b;*/
-  /*transform: translateY(5px);*/
+}
+
+
+.navigation-button {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2vw;
 }
 
 
@@ -79,9 +81,14 @@ button:active {
   }
 
   button {
+    width: 40vw;
     padding: 1vw;
     font-size: 3vw;
     margin-bottom: 3vw;
+  }
+  .clock {
+    width: 80vw;
+    height: 80vw;
   }
 }
 
@@ -92,8 +99,13 @@ button:active {
   }
 
   button {
+    width: 30vw;
     padding: 1.2vw;
     font-size: 2.8vw;
     margin-bottom: 4vw;
+  }
+  .clock {
+    width: 60vw;
+    height: 60vw;
   }
 }
